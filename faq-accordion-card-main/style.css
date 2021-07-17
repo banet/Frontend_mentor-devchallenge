@@ -1,0 +1,234 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:300,regular,700);
+
+:root {
+  --text-blue: hsl(238, 29%, 16%);
+  --text-red: hsl(14, 88%, 65%);
+  --text-dblue: hsl(237, 12%, 33%);
+  --text-gblue: hsl(240, 6%, 50%);
+
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
+
+  --divider-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  box-sizing: initial;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+body {
+  margin: 0;
+  padding: 10rem 1rem;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    var(--gradient-violet),
+    var(--gradient-blue)
+  );
+  color: var(--text-blue);
+  line-height: 1.4;
+}
+
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  max-width: 56rem;
+  margin: 0 auto;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 230px;
+  background-position: center 0%;
+  position: relative;
+
+  padding: 2.875rem 1.5rem;
+}
+
+.card__text {
+  padding-top: 7.2rem;
+}
+
+.card__text h1 {
+  text-align: center;
+}
+
+.accordion__question {
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--text-blue);
+  font-weight: 500;
+  border: 0;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion__question::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-image: url("images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.accordion__question.open {
+  font-weight: bold;
+}
+.accordion__content {
+  padding-bottom: 0.8rem;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.accordion__item {
+  border-bottom: 0.7px solid var(--divider-blue);
+  margin-bottom: 1rem;
+}
+
+.small-image {
+  display: none;
+}
+/* .card__text {
+} */
+.card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+.card__image img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  transform: translateY(-12%);
+  height: auto;
+  max-width: 240px;
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: 4rem;
+  }
+  .card {
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: -13% center;
+    padding: 4.3rem 5rem 4.3rem 0;
+  }
+  .card__image,
+  .card__text {
+    flex: 1;
+  }
+
+  .card__image img {
+    position: absolute;
+    top: auto;
+    left: 18%;
+
+    max-width: 440px;
+    transform: translateX(-50%);
+    overflow: hidden;
+  }
+  .card__text {
+    padding: 0;
+  }
+  .accordion__question {
+    font-family: "Kumbh Sans", sans-serif;
+    color: var(--text-blue);
+    font-weight: 500;
+    border: 0;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion__question::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url("images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+  }
+  /* .accordion__question,
+  .accordion__question:focus-visible {
+    border: none;
+    outline: 0.3px solid rgba(0, 0, 0, 0.1);
+  } */
+
+  .accordion__question.open {
+    font-weight: 700;
+  }
+
+  .accordion__question.open::after {
+    transform: rotate(180deg);
+  }
+  .accordion__collapse.collapse {
+    display: none;
+  }
+  .accordion__collapse.collapse.open {
+    transition: height 0.25s cubic-bezier(1, 0, 0, 1);
+  }
+  .accordion__collapse.open {
+    display: block;
+  }
+
+  .collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+  }
+
+  .accordion__content {
+    padding-bottom: 0.8rem;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .accordion__item {
+    border-bottom: 0.7px solid var(--divider-blue);
+    margin-bottom: 1rem;
+  }
+
+  .small-image {
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+  }
+}
