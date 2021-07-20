@@ -1,15 +1,15 @@
 {
-  "name": "dist",
+  "name": "stats-preview-card-component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d stats-preview-card-component"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage":"https://github.com/banet/Frontend_mentor-devchallenge",
+  "homepage":"https://github.com/banet/Frontend_mentor-devchallenge/dist/stats-preview-card-component-main",
   "dependencies": {
     "gh-pages": "^3.2.3"
   }
