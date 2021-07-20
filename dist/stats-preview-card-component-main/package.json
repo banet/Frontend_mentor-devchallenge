@@ -1,15 +1,15 @@
 {
   "name": "stats-preview-card-component",
   "version": "1.0.0",
-  "description": "",
+  "description": "![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d /dist/stats-preview-card-component"
+    "deploy": "gh-pages -d dist/stats-preview-card-component-main"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bane",
   "license": "ISC",
-  "homepage":"https://github.com/banet/Frontend_mentor-devchallenge/dist/stats-preview-card-component-main",
+  "homepage": "https://github.com/banet/Frontend_mentor-devchallenge/dist/stats-preview-card-component-main",
   "dependencies": {
     "gh-pages": "^3.2.3"
   }
