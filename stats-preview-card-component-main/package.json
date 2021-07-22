@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Bane",
   "license": "ISC",
-  "homepage": "https://github.com/banet/Frontend_mentor-devchallenge/dist/stats-preview-card-component-main",
+  "homepage": "https://github.com/banet/Frontend_mentor-devchallenge/stats-preview-card-component-main",
   "dependencies": {
     "gh-pages": "^3.2.3"
   }
