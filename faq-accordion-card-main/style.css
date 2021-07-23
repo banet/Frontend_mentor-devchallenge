@@ -186,6 +186,8 @@ body {
 
   .card__text h1 {
     text-align: left;
+    font-size: 25px;
+    font-weight: bold;
   }
 
   .accordion__question {
