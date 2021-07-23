@@ -210,11 +210,6 @@ body {
     transition: transform 0.3s ease-in-out;
     border: none;
   }
-  /* .accordion__question,
-  .accordion__question:focus-visible {
-    border: none;
-    outline: 0.3px solid rgba(0, 0, 0, 0.1);
-  } */
 
   .accordion__question.open {
     font-weight: 700;

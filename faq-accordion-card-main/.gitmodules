@@ -1,0 +1,4 @@
+[submodule "faq-accordion-card-main"]
+	path = include/faq-accordion-card-main
+	url = https://github.com/banet/Frontend_mentor-devchallenge/tree/master/faq-accordion-card-main
+
