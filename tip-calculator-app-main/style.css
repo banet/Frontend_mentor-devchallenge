@@ -80,11 +80,12 @@ input {
   max-width: 100%;
   text-align: center;
 }
-.custom {
-  background-color: var(--light-grayish-nians-cyan);
-  color: var(--dark-grayish-nians-cyan);
+input.custom {
+  position: relative;
+  font-size: 1rem;
   font-weight: bold;
 }
+
 .bill {
   padding-bottom: 36px;
   position: relative;
@@ -152,6 +153,10 @@ input {
   text-transform: uppercase;
 }
 
+.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
 @media (min-width: 700px) {
   .container {
     display: grid;

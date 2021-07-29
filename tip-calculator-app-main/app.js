@@ -3,7 +3,10 @@
 
 // grab all eelements
 
-const buttons = document.querySelectorAll('.btn')
+
+
+const tipBtn = document.querySelectorAll('.tip')
+const tipCustom = document.querySelector('.custom')
 
 const billInput = document.querySelector('.bill_input')
 const resetButton = document.querySelector('.total_reset')
@@ -14,38 +17,53 @@ const tipAmountTotal = document.querySelector('.tip_amount_header_total')
 
 
 
-buttons.forEach(function(item) {
-    item.addEventListener('click', addTip)
+tipBtn.forEach(function(item) {
+    item.addEventListener('click', handleClick)
 })
 
-function addTip(e) {
-  buttons.forEach(btn => {
+function handleClick(e) {
+
+  tipBtn.forEach(btn => {
+    // clear active state
+    btn.classList.remove('active')
     if(e.target.innerHTML == btn.innerHTML) {
-  tipValue = parseFloat(btn.innerHTML) / 100
-  console.log(tipValue)
-  } 
+      btn.classList.add('active')
+    tipValue = parseFloat(btn.innerHTML) / 100
+    console.log(tipValue)
+    } 
   })
- 
-    // let billValue = billInput.value
-    // let tipProcent  = tip.value / 100
-    // let tipValue = tipProcent * billValue
-    //   console.log(tipValue)
-    // const tipAmount = this.innerText
-    // console.log(tipAmount)
 }
 
-// buttons.forEach(button => {
-//   button.addEventListener('click', (e) => {
-//     // console.log(e.target)
-    
-//   })
+let bilValue = 0.0
+let tipValue = .15
+
+
+// Set bil value
+billInput.addEventListener('input', setBillValue)
+
+function setBillValue() {
+
+  if(billInput.value.includes(',')) {
+    billInput.value = billInput.value.replace(',', '.')
+  }
+  billValue = parseFloat(billInput.value)
+
+  console.log(billValue)
+}
+
+tipCustom.addEventListener('input', setCustomValue)
+
+function setCustomValue() {
+  const customValue = parseFloat(tipCustom.value) / 100
+  console.log(customValue)
   
-// })
+  tipBtn.forEach(btn => {
+    // remove active class
+    btn.classList.remove('active')
+  })
+  console.log(tipValue)
 
-
-
-
-
+}
 
 // buttons.forEach(button => {
 //     button.addEventListener('click', (e) => {
