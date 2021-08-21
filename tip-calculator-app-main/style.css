@@ -37,10 +37,18 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  padding-bottom: 85px;
+h4 {
+  padding-top: 2rem;
+  padding-bottom: 80px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.9px;
+  color: hsl(183, 100%, 15%);
 }
-
+p {
+  padding-bottom: 12px;
+  color: var(--dark-grayish-nians-cyan);
+}
 input {
   font-size: 1.5rem;
   font-weight: bold;
@@ -53,11 +61,22 @@ input {
   position: relative;
   text-align: right;
 }
+input.bill_input::placeholder,
+input.people_input::placeholder {
+  font-size: 1.5rem;
+}
 .icon-dollar {
   position: absolute;
-  top: 62px;
+  top: 52px;
   bottom: 0;
   left: 15px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
@@ -65,8 +84,8 @@ input {
   border-radius: 10px;
   background-color: white;
 }
-.bill_info h3 {
-  padding-bottom: 13px;
+.logo {
+  margin: 5rem 0 3.5rem 0;
 }
 
 .btn {
@@ -80,10 +99,38 @@ input {
   max-width: 100%;
   text-align: center;
 }
+
+.error-message {
+  opacity: 0;
+}
+
+.show-error-message {
+  transition: opacity 0.3s;
+  opacity: 1;
+  color: indianred;
+  font-weight: 700;
+  font-size: 12px;
+}
+
 input.custom {
-  position: relative;
-  font-size: 1rem;
+  height: 51.53px;
+  text-align: right;
+  background-color: var(--light-grayish-nians-cyan);
+  color: var(--dark-grayish-nians-cyan);
+}
+.custom:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+  color: var(--very-dark-cyan);
+}
+input::placeholder {
+  font-size: 0.9rem;
   font-weight: bold;
+  color: var(--dark-grayish-nians-cyan);
+}
+.custom-active {
+  border: 1px solid var(--dark-grayish-cyan);
+  color: var(--very-dark-cyan);
 }
 
 .bill {
@@ -91,26 +138,49 @@ input.custom {
   position: relative;
 }
 
-.bill h3 {
-  padding-bottom: 21px;
-}
 .select_tip {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 47px 47px;
-  gap: 13px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
 }
-.select_tip h3 {
-  padding-bottom: 22px;
-}
+
+/* .select_tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+} */
+
 .people {
-  padding-top: 32px;
   position: relative;
+}
+.people_in:focus {
+  outline: none;
+  border: 1px solid indianred;
+}
+.people-info {
+  padding-top: 32px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .people-info.error-message label {
+  visibility: hidden;
+}
+.people-info.label label {
+  visibility: visible;
+} */
+
+.people-info p {
+  padding-bottom: 0;
 }
 
 .icon-person {
   position: absolute;
-  top: 87px;
+  top: 82px;
   bottom: 0;
   left: 15px;
 }
@@ -158,6 +228,9 @@ input.custom {
   color: #00494d;
 }
 @media (min-width: 700px) {
+  .logo {
+    margin: 0 0 3.5rem 0;
+  }
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

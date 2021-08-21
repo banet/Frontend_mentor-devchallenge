@@ -11,51 +11,64 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Spli<br>tter</h1>
- <section class="container">
-    <div class="bill_info">
-      <div class="bill">
-        <h3>Bil</h3>
-        <input type="text"  class="bill_input">
-        <img src="images/icon-dollar.svg" alt="dollar" class="icon-dollar">
-      </div>
-      <h3>Select Tip %</h3>
-      <div class="select_tip">
-        
-        <button type="text" class="btn tip">5%</button>
-        <button type="text" class="btn tip">10%</button>
-        <button type="text" class="btn tip">15%</button>
-        <button type="text" class="btn tip">25%</button>
-        <button type="button" class="btn tip active">50%</button>
-        <input type="text" class="btn custom" value="Custom" />
-      </div>
-      <div class="people">
-        <h3>Number of People</h3>
-        <input type="text"  class="people_input">
-        <img src="images/icon-person.svg" alt="dollar" class="icon-person">
-      </div>
+  <!-- <h4>Spli<br>tter</h4> -->
+  <section class="main-container">
+    <div class="logo">
+      <img src="images/logo.svg" alt="logo">
     </div>
-
-    <div class="bill_result">
-      <div class="tip_amount">
-        <div class="amount">
-        <label for="">Tip Amount</label>
-        <small> / person</small>
-        </div>
-        <h3 class="tip_amount_header_person"></h3>
-      </div>
-      <div class="tip_amount">
-        <div class="amount">
-        <label for="">Total</label>
-        <small> / person</small>
-        </div>
-        <h3 class="tip_amount_header_total"></h3>      
-      </div>
-      <div class="reset_button"><button class="btn total_reset">Reset</button></div>
+  
+    <section class="container">
       
-    </div>
+        <div class="bill_info">
+          <div class="bill">
+            <p>Bil</p>
+            <input type="text"  class="bill_input" placeholder="0.0">
+            <img src="images/icon-dollar.svg" alt="dollar" class="icon-dollar">
+          </div>
+          <p>Select Tip %</p>
+          <div class="select_tip">
+            
+            <button type="text" class="btn tip">5%</button>
+            <button type="text" class="btn tip">10%</button>
+            <button type="text" class="btn tip active">15%</button>
+            <button type="text" class="btn tip">25%</button>
+            <button type="button" class="btn tip ">50%</button>
+            <input type="text" class="btn custom " placeholder="Custom" />
+          </div>
+          <div class="people">
+            <div class="people-info">
+              <p>Number of People</p>
+              <label for="error-message" class="error-message">Cant be zero</label>
+            </div>
+            <div class="people-input">
+              
+              <input type="text"  class="people_input " placeholder="1">
+              <img src="images/icon-person.svg" alt="dollar" class="icon-person">
+            </div>
+          </div>
+        </div>
 
- </section>
+        <div class="bill_result">
+          <div class="tip_amount">
+            <div class="amount">
+            <label for="">Tip Amount</label>
+            <small> / person</small>
+            </div>
+            <h3 class="tip_amount_header_person"></h3>
+          </div>
+          <div class="tip_amount">
+            <div class="amount">
+            <label for="">Total</label>
+            <small> / person</small>
+            </div>
+            <h3 class="tip_amount_header_total"></h3>      
+          </div>
+          <div class="reset_button"><button class="btn total_reset">Reset</button></div>
+          
+        </div>
+
+    </section>
+</section>
 
  
  <script src="app.js"></script> 
