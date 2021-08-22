@@ -19,9 +19,9 @@
   /*Neutral*/
   --very-dark-cyan: hsl(183, 100%, 15%);
   --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --dark-grayish-nians-cyan: hsl(186, 14%, 56%);
-  --light-grayish-cyan: hsl(186, 14%, 84%);
-  --light-grayish-nians-cyan: hsl(186, 14%, 97%);
+  --dark-grayish-nians-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-nians-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
 }
 
@@ -60,11 +60,19 @@ input {
   width: 100%;
   position: relative;
   text-align: right;
+  border-radius: 4px;
 }
+
 input.bill_input::placeholder,
 input.people_input::placeholder {
   font-size: 1.5rem;
 }
+
+input.people_input.error {
+  outline: none;
+  border: 2px solid indianred;
+}
+
 .icon-dollar {
   position: absolute;
   top: 52px;
@@ -98,6 +106,11 @@ input.people_input::placeholder {
   border-radius: 5px;
   max-width: 100%;
   text-align: center;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
 }
 
 .error-message {
@@ -118,6 +131,12 @@ input.custom {
   background-color: var(--light-grayish-nians-cyan);
   color: var(--dark-grayish-nians-cyan);
 }
+input.custom:hover {
+  background-color: inherit;
+}
+input.custom::placeholder {
+  text-align: center;
+}
 .custom:focus {
   outline: none;
   border: 2px solid #26c0ab;
@@ -131,6 +150,15 @@ input::placeholder {
 .custom-active {
   border: 1px solid var(--dark-grayish-cyan);
   color: var(--very-dark-cyan);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--primary);
+}
+.active-state {
+  outline: none;
+  border: 2px solid var(--primary);
 }
 
 .bill {
@@ -222,6 +250,10 @@ input::placeholder {
   font-weight: bold;
   text-transform: uppercase;
 }
+.total_reset:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+}
 
 .active {
   background-color: #26c0ab;
@@ -258,5 +290,9 @@ input::placeholder {
   }
   .reset_button {
     padding-top: 4rem;
+  }
+  .total_reset:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
   }
 }

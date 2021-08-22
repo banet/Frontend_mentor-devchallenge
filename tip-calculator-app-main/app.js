@@ -59,7 +59,7 @@ function setBillValue() {
   }
   billValue = parseFloat(billInput.value)
 
-  console.log(billValue)
+ 
   calculateTip()
 }
 
@@ -113,6 +113,10 @@ function setPeopleNumber() {
     setTimeout(() => {
       errMessage.classList.remove('show-error-message')
     }, 3000);
+    peopleInput.classList.add('error')
+  }
+  else {
+    peopleInput.classList.remove('error')
   }
   calculateTip()
 }
@@ -129,6 +133,7 @@ function calculateTip() {
 }
 
 function totalReset() {
+  btnReset.classList.add('active')
   billInput.value = '0.0';
   setBillValue()
 
