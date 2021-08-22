@@ -147,10 +147,6 @@ input::placeholder {
   font-weight: bold;
   color: var(--dark-grayish-nians-cyan);
 }
-.custom-active {
-  border: 1px solid var(--dark-grayish-cyan);
-  color: var(--very-dark-cyan);
-}
 
 input:focus {
   outline: none;
@@ -173,14 +169,6 @@ input:focus {
   gap: 1.5rem;
 }
 
-/* .select_tip {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-} */
-
 .people {
   position: relative;
 }
@@ -195,12 +183,6 @@ input:focus {
   justify-content: space-between;
   align-items: center;
 }
-/* .people-info.error-message label {
-  visibility: hidden;
-}
-.people-info.label label {
-  visibility: visible;
-} */
 
 .people-info p {
   padding-bottom: 0;

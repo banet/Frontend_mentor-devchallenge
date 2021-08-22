@@ -1,9 +1,3 @@
-// alert('hello')
-
-
-// grab all eelements
-
-
 
 const tipBtn = document.querySelectorAll('.tip')
 const tipCustom = document.querySelector('.custom')
