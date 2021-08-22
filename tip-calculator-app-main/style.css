@@ -28,7 +28,7 @@
 body {
   font-family: "Space Mono", sans-serif;
   line-height: 1.5;
-  background-color: var(--dark-grayish-nians-cyan);
+  background-color: var(--light-grayish-cyan);
 
   display: flex;
   flex-direction: column;
