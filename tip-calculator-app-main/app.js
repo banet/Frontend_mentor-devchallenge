@@ -71,7 +71,7 @@ function handleClick(e) {
   })
   //clear custom tip
   tipCustom.value =""
-  console.log(tipValue)
+ 
 }
 
 function setCustomValue(e) {
@@ -82,7 +82,7 @@ function setCustomValue(e) {
   console.log(tipCustom)
 
   tipValue = parseFloat(tipCustom.value) / 100
-  console.log(tipValue)
+ 
   
   // remove active state class
   tipBtn.forEach(btn => {
