@@ -1,0 +1,10 @@
+// :root {
+//   --color: red;
+// }
+
+$primary: blue;
+
+body {
+  // color: var(--red);
+  color: $primary;
+}

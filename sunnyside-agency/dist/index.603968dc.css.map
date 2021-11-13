@@ -1,0 +1,1 @@
+{"mappings":"AAMA;EAEE,OAJQ","sources":["src/scss/main.scss"],"sourcesContent":["// :root {\r\n//   --color: red;\r\n// }\r\n\r\n$primary: blue;\r\n\r\nbody {\r\n  // color: var(--red);\r\n  color: $primary;\r\n}\r\n"],"names":[],"version":3,"file":"index.603968dc.css.map","sourceRoot":"/__parcel_source_root/"}
