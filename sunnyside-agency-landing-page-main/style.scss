@@ -1,0 +1,99 @@
+$sm: 375px;
+$md: 800px;
+$lg: 1440px;
+
+/*importavao Baja sa nekog sajta
+https: //levelup.gitconnected.com/the-easier-way-to-write-media-queries-with-scss-mixin-c7c956150551
+*/
+
+@mixin minQuery($propertyName, $defaultValue, $mediaQueries: ()) {
+    #{$propertyName}: #{$defaultValue};
+
+    @each $breakpoint,
+    $value in $mediaQueries {
+        @media (min-width: #{$breakpoint}) {
+            #{$propertyName}: #{$value};
+        }
+    }
+}
+
+$base: 1rem;
+$sizes: (
+    "1": $base*.25,
+    "2": $base*.5,
+    "3": $base*.75,
+    "4": $base* 1,
+    "5": $base*1.25,
+    "6": $base*1.5,
+    "7": $base*1.75,
+    "8": $base* 2,
+    "9": $base*2.25,
+    "10": $base*2.5,
+    "11": $base*2.75,
+    "12": $base* 3,
+    "13": $base*3.25,
+    "14": $base*3.5,
+    "15": $base*3.75,
+    "16": $base* 4,
+);
+
+
+$directions: (
+    "x": "inline",
+    "y": "block",
+    "l": "inline-start",
+    "r": "inline-end",
+    "t": "block-start",
+    "b": "block-end",
+);
+
+@each $size,
+$sizeValue in $sizes {
+    .gap {
+        &-#{$size} {
+            gap: $sizeValue;
+        }
+    }
+
+    .p {
+        &-#{$size} {
+            padding: $sizeValue;
+        }
+
+        @each $dir,
+        $dirValue in $directions {
+            &#{$dir}-#{$size} {
+                padding-#{$dirValue}: #{$sizeValue};
+            }
+        }
+    }
+
+    .m {
+        &-#{$size} {
+            margin: $sizeValue;
+        }
+
+        @each $dir,
+        $dirValue in $directions {
+            &#{$dir}-#{$size} {
+                margin-#{$dirValue}: #{$sizeValue};
+            }
+        }
+    }
+}
+
+;
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    @include minQuery(display, block, ($md: none));
+}
+
+h3 {
+    color: red;
+}
