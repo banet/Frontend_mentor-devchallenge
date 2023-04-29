@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic);
 
+/*Tutorial: https://www.youtube.com/watch?v=Bz_3odLrekg&t=0s*/
 * {
   padding: 0;
   margin: 0;
@@ -45,10 +46,12 @@ h4 {
   letter-spacing: 1.9px;
   color: hsl(183, 100%, 15%);
 }
+
 p {
   padding-bottom: 12px;
   color: var(--dark-grayish-nians-cyan);
 }
+
 input {
   font-size: 1.5rem;
   font-weight: bold;
@@ -92,6 +95,7 @@ input.people_input.error {
   border-radius: 10px;
   background-color: white;
 }
+
 .logo {
   margin: 5rem 0 3.5rem 0;
 }
@@ -108,6 +112,7 @@ input.people_input.error {
   text-align: center;
   font-weight: bold;
 }
+
 .btn:hover {
   background-color: var(--light-grayish-cyan);
   color: var(--very-dark-cyan);
@@ -131,17 +136,21 @@ input.custom {
   background-color: var(--light-grayish-nians-cyan);
   color: var(--dark-grayish-nians-cyan);
 }
+
 input.custom:hover {
   background-color: inherit;
 }
+
 input.custom::placeholder {
   text-align: center;
 }
+
 .custom:focus {
   outline: none;
   border: 2px solid #26c0ab;
   color: var(--very-dark-cyan);
 }
+
 input::placeholder {
   font-size: 0.9rem;
   font-weight: bold;
@@ -152,6 +161,7 @@ input:focus {
   outline: none;
   border: 2px solid var(--primary);
 }
+
 .active-state {
   outline: none;
   border: 2px solid var(--primary);
@@ -172,10 +182,12 @@ input:focus {
 .people {
   position: relative;
 }
+
 .people_in:focus {
   outline: none;
   border: 1px solid indianred;
 }
+
 .people-info {
   padding-top: 32px;
   padding-bottom: 12px;
@@ -210,6 +222,7 @@ input:focus {
   justify-content: space-between;
   padding-bottom: 24px;
 }
+
 .amount {
   display: flex;
   flex-direction: column;
@@ -219,11 +232,13 @@ input:focus {
 .amount small {
   color: var(--dark-grayish-nians-cyan);
 }
+
 .tip_amount_header_person,
 .tip_amount_header_total {
   color: var(--primary);
   font-size: 23px;
 }
+
 .total_reset {
   padding: 0.8rem 1.4rem;
   width: 100%;
@@ -232,6 +247,7 @@ input:focus {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .total_reset:hover {
   background-color: var(--light-grayish-cyan);
   color: var(--very-dark-cyan);
@@ -241,38 +257,48 @@ input:focus {
   background-color: #26c0ab;
   color: #00494d;
 }
+
 @media (min-width: 700px) {
   .logo {
     margin: 0 0 3.5rem 0;
   }
+
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 850px;
   }
+
   .bill_info {
     padding-right: 50px;
   }
+
   .select_tip {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
   }
+
   .tip_amount {
     padding-bottom: 46px;
   }
+
   .tip_amount_header {
     font-size: 35px;
   }
+
   .bill_result {
     margin-top: 0;
   }
-  .bill-result > button.total_reset {
+
+  .bill-result>button.total_reset {
     margin-bottom: 92px;
   }
+
   .reset_button {
     padding-top: 4rem;
   }
+
   .total_reset:hover {
     background-color: var(--light-grayish-cyan);
     color: var(--very-dark-cyan);
