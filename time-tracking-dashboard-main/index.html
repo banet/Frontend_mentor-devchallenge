@@ -14,28 +14,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@700&family=Rubik:wght@300;400;500&display=swap"
     rel="stylesheet">
+  <!-- <link rel="stylesheet" href="oldstyle.css"> -->
   <link rel="stylesheet" href="style.css">
 
 
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
   <main>
     <div class="grid-container">
-      <div class="card item1">
+      <!-- <div class="card item1">
         <div class="card-header">
           <picture>
             <source srcset="images/image-jeremy.png">
@@ -49,15 +40,16 @@
           </h1>
 
         </div>
+        <div class="inner-card">
+          <ul class="card-list">
+            <li><a>Daily</a></li>
+            <li><a>Weekly</a></li>
+            <li><a>Monthly</a></li>
+          </ul>
+        </div>
 
       </div>
-      <div class="inner-card">
-        <ul class="card-list">
-          <li><a>Daily</a></li>
-          <li><a>Weekly</a></li>
-          <li><a>Monthly</a></li>
-        </ul>
-      </div>
+
 
       <div class="card">
         <div class="card-top-header">
@@ -172,8 +164,25 @@
           </div>
 
         </div>
+      </div> -->
+
+      <div class="card card--avatar">
+        <div class="card--avatar-top">
+
+          <img src="./images/image-jeremy.png" alt="jeremy">
+          <span class="title">Report for</span>
+          <h1>Jeremy Robson</h1>
+
+
+        </div>
+
+        <div class="card--avatar-bottom">
+          <button class="btn">Daily</button>
+          <button class="btn">Weekly</button>
+          <button class="btn active">Montly</button>
+
+        </div>
       </div>
-    </div>
   </main>
 
   ### Primary
