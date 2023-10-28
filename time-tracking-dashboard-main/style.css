@@ -22,7 +22,7 @@
 
 body {
     font-family: 'Rubik', sans-serif;
-    background-color: white;
+    background-color: var(--clr-neutral-900);
     color: white;
 
     display: grid;
@@ -33,13 +33,16 @@ body {
 
 .grid-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: clam(1rem, 2.5vw, 2rem);
+    gap: 1rem;
+    align-content: center;
 }
 
 .card {
     background-color: var(--clr-neutral-600);
     border-radius: 1rem;
+    width: fit-content;
 }
 
 .card--avatar {
@@ -88,6 +91,59 @@ h1>span {
     border-bottom-right-radius: 1rem;
 }
 
+
+/*---- another card -----*/
+
+.icon {
+    width: 3.5rem;
+
+}
+
+.span-time {
+    font-size: small;
+}
+
+.card-small {
+    width: auto;
+}
+
+.card--small-top {
+    display: flex;
+    background-color: var(--clr-red-200);
+    align-self: flex-end;
+    padding: .5rem;
+    width: auto;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.btn-small {
+    display: flex;
+    align-content: end;
+
+}
+
+.card-small-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: var(--clr-neutral-600);
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.small-content,
+.button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center
+}
+
+.button-content {
+    gap: .7rem;
+}
+
 .btn {
     font: inherit;
     background: inherit;
@@ -98,8 +154,7 @@ h1>span {
     padding: .2rem .8rem;
     cursor: pointer;
     box-shadow: 0 0 0 -.5rem var(--bg);
-    transition:
-        box-shadow var(--transition),
+    transition: box-shadow var(--transition),
         color var(--transition);
 }
 
@@ -113,7 +168,6 @@ h1>span {
 }
 
 .btn:focus-within {
-    box-shadow:
-        0 0 0 -.2rem var(--bg),
+    box-shadow: 0 0 0 -.2rem var(--bg),
         0 0 0 -.8rem var(--avatar);
 }
