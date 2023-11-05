@@ -1,3 +1,12 @@
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
 :root {
     --clr-blue: hsl(246, 80%, 60%);
     --clr-red-200: hsl(15, 100%, 70%);
@@ -31,7 +40,8 @@ body {
     padding: 2rem;
 }
 
-.grid-container {
+
+.card-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -75,8 +85,12 @@ h1 {
     flex: 1 1 50%;
 }
 
+h2 {
+    font-size: 1rem;
+}
+
 h1>span {
-    font-size: 12px;
+    font-size: .8rem;
     color: var(--clr-neutral-100);
 }
 
@@ -89,59 +103,6 @@ h1>span {
     padding: 1rem .5rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-}
-
-
-/*---- another card -----*/
-
-.icon {
-    width: 3.5rem;
-
-}
-
-.span-time {
-    font-size: small;
-}
-
-.card-small {
-    width: auto;
-}
-
-.card--small-top {
-    display: flex;
-    background-color: var(--clr-red-200);
-    align-self: flex-end;
-    padding: .5rem;
-    width: auto;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-.btn-small {
-    display: flex;
-    align-content: end;
-
-}
-
-.card-small-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    background-color: var(--clr-neutral-600);
-    border-radius: 1rem;
-    padding: .5rem;
-}
-
-.small-content,
-.button-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center
-}
-
-.button-content {
-    gap: .7rem;
 }
 
 .btn {
@@ -170,4 +131,63 @@ h1>span {
 .btn:focus-within {
     box-shadow: 0 0 0 -.2rem var(--bg),
         0 0 0 -.8rem var(--avatar);
+}
+
+
+/*---- Time card -----*/
+.container-timecards {
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+
+.timecards-top {
+    background-color: var(--clr-red-200);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: normal;
+    padding-right: 1rem;
+    overflow: hidden;
+
+}
+
+.timecards-bottom {
+    background-color: var(--clr-neutral-600);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 1rem;
+    margin-top: -2rem;
+
+
+}
+
+.timecard__icon {
+    margin-top: -1rem;
+}
+
+.timercards-content-left {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
+.timercards-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+
+}
+
+
+.timecards__last-week {
+    font-size: 10px;
+    color: var(--clr-neutral-300);
 }

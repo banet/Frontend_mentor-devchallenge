@@ -16,155 +16,12 @@
     rel="stylesheet">
   <!-- <link rel="stylesheet" href="oldstyle.css"> -->
   <link rel="stylesheet" href="style.css">
-
-
-
-
 </head>
 
 <body>
 
   <main>
-    <div class="grid-container">
-      <!-- <div class="card item1">
-        <div class="card-header">
-          <picture>
-            <source srcset="images/image-jeremy.png">
-            <img class="avatar" src="images/image-jeremy.png" alt="avatar">
-          </picture>
-        </div>
-        <div class="card-body">
-          <p class="caption">Report for</p>
-          <h1 class="card-title">
-            Jeremy Robson
-          </h1>
-
-        </div>
-        <div class="inner-card">
-          <ul class="card-list">
-            <li><a>Daily</a></li>
-            <li><a>Weekly</a></li>
-            <li><a>Monthly</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-
-      <div class="card">
-        <div class="card-top-header">
-          <img class="icon-work" src="images/icon-work.svg" alt="work">
-        </div>
-        <div class="card-inner-card">
-          <div class="card-inner__top">
-            <h4>Work</h4>
-            <div class="card-icon">
-              <img src="images/icon-ellipsis.svg" alt="elipsis">
-            </div>
-
-          </div>
-          <div class="card-inner__body">
-            <h1 class="card-title">32hrs</h1>
-            <p class="card-inner__text">Last Week - 36hrs</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top-header">
-          <img class="icon-work" src="images/icon-work.svg" alt="work">
-        </div>
-        <div class="card-inner-card">
-          <div class="card-inner__top">
-            <h4>Work</h4>
-            <div class="card-icon">
-              <img src="images/icon-ellipsis.svg" alt="elipsis">
-            </div>
-
-          </div>
-          <div class="card-inner__body">
-            <h1 class="card-title">32hrs</h1>
-            <p class="card-inner__text">Last Week - 36hrs</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top-header">
-          <img class="icon-work" src="images/icon-work.svg" alt="work">
-        </div>
-        <div class="card-inner-card">
-          <div class="card-inner__top">
-            <h4>Work</h4>
-            <div class="card-icon">
-              <img src="images/icon-ellipsis.svg" alt="elipsis">
-            </div>
-
-          </div>
-          <div class="card-inner__body">
-            <h1 class="card-title">32hrs</h1>
-            <p class="card-inner__text">Last Week - 36hrs</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top-header">
-          <img class="icon-work" src="images/icon-work.svg" alt="work">
-        </div>
-        <div class="card-inner-card">
-          <div class="card-inner__top">
-            <h4>Work</h4>
-            <div class="card-icon">
-              <img src="images/icon-ellipsis.svg" alt="elipsis">
-            </div>
-
-          </div>
-          <div class="card-inner__body">
-            <h1 class="card-title">32hrs</h1>
-            <p class="card-inner__text">Last Week - 36hrs</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top-header">
-          <img class="icon-work" src="images/icon-work.svg" alt="work">
-        </div>
-        <div class="card-inner-card">
-          <div class="card-inner__top">
-            <h4>Work</h4>
-            <div class="card-icon">
-              <img src="images/icon-ellipsis.svg" alt="elipsis">
-            </div>
-
-          </div>
-          <div class="card-inner__body">
-            <h1 class="card-title">32hrs</h1>
-            <p class="card-inner__text">Last Week - 36hrs</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-top-header">
-          <img class="icon-work" src="images/icon-work.svg" alt="work">
-        </div>
-        <div class="card-inner-card">
-          <div class="card-inner__top">
-            <h4>Work</h4>
-            <div class="card-icon">
-              <img src="images/icon-ellipsis.svg" alt="elipsis">
-            </div>
-
-          </div>
-          <div class="card-inner__body">
-            <h1 class="card-title">32hrs</h1>
-            <p class="card-inner__text">Last Week - 36hrs</p>
-          </div>
-
-        </div>
-      </div> -->
+    <div class="card-container">
 
       <div class="card card--avatar">
         <div class="card--avatar-top">
@@ -179,26 +36,27 @@
           <button class="btn active">Montly</button>
         </div>
       </div>
-      <div class="card card-small">
-        <div class="card--small-top">
-          <button class="btn-small">
-            <img src="./images/icon-work.svg" class="icon" alt="icon-work">
 
-          </button>
-
+      <div class="container-timecards">
+        <div class="timecards-top">
+          <svg class="timecard__icon" width="79" height="79" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m18.687 10.43 15.464 30.906c.31.682.743 1.322 1.3 1.88.558.557 1.198.99 1.714 1.217L68.237 59.98 52.484 75.732a8.025 8.025 0 0 1-11.355 0L2.934 37.538a8.025 8.025 0 0 1 0-11.356L18.687 10.43Zm19.345-7.99 10.839 10.838 2.065-2.064a5.845 5.845 0 0 1 8.258 0l8.258 8.259a5.845 5.845 0 0 1 0 8.258l-2.064 2.064 10.839 10.84a8.025 8.025 0 0 1 0 11.355l-4.728 4.728L39.126 40.53a1.963 1.963 0 0 1-.578-.413 1.963 1.963 0 0 1-.413-.578L21.95 7.168l4.728-4.728a8.025 8.025 0 0 1 11.355 0Zm17.033 12.903-2.064 2.065 8.258 8.258 2.064-2.064-8.258-8.259Z"
+              fill="#D96C47" fill-rule="nonzero" />
+          </svg>
         </div>
-
-        <div class="card-small-bottom">
-          <div class="small-content">
-            <h1><span>Work</span><br />
+        <div class="timecards-bottom">
+          <div class="timercards-content-left">
+            <h2 class="timecards__header"><span>Work</span><br />
               5hrs</h1>
           </div>
-
-          <div class="button-content">
-
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
-
-            <span class="span-time">Last week - 7hrs</span>
+          <div class="timercards-content-right">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                fill="#BBC0FF" fill-rule="evenodd" />
+            </svg>
+            <small class="timecards__last-week">Previous - 36hrs</small>
           </div>
 
         </div>
