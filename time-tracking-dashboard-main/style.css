@@ -24,10 +24,13 @@
     --clr-neutral-900: hsl(226, 43%, 10%);
 
     /*Templating for cards*/
+
     --bg: var(--clr-neutral-300);
     --transition: 200ms ease-out;
     --avatar: var(--clr-blue);
 }
+
+
 
 body {
     font-family: 'Rubik', sans-serif;
@@ -62,6 +65,7 @@ body {
 
 }
 
+
 .card--avatar-top {
     display: flex;
     align-items: center;
@@ -87,12 +91,14 @@ h1 {
 
 h2 {
     font-size: 1rem;
+    font-weight: 400;
 }
 
 h1>span {
     font-size: .8rem;
     color: var(--clr-neutral-100);
 }
+
 
 .card--avatar-bottom {
     display: flex;
@@ -138,20 +144,59 @@ h1>span {
 .container-timecards {
     display: flex;
     flex-direction: column;
+    position: relative;
 
 
 
 }
 
+.work {
+    background-color: var(--clr-red-200);
+}
+
+.play {
+    background-color: var(--clr-blue-200);
+}
+
+.study {
+    background-color: var(--clr-red-400);
+
+}
+
+.exersize {
+    background-color: var(--clr-green-200);
+}
+
+.social {
+    background-color: var(--clr-violet);
+}
+
+.self-care {
+    background-color: var(--clr-orange);
+}
+
 
 .timecards-top {
-    background-color: var(--clr-red-200);
     border-radius: 1rem;
     display: flex;
     justify-content: end;
     align-items: normal;
     padding-right: 1rem;
     overflow: hidden;
+    position: relative;
+}
+
+/* .timecard-top {
+    position:relative;
+    overflow: hidden;
+} */
+.exersize-icon {
+    padding-top: .4rem;
+}
+
+.card-sm {
+    padding: 1.5rem 1rem;
+    margin-top: -2rem;
 
 }
 
@@ -161,15 +206,18 @@ h1>span {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.7rem 1rem;
-    margin-top: -2rem;
 
+    position: relative;
+}
 
+.social__icon {
+    margin-top: -2.3rem;
 }
 
 .timecard__icon {
     margin-top: -1rem;
 }
+
 
 .timercards-content-left {
     display: flex;
@@ -182,12 +230,34 @@ h1>span {
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 1rem;
+    gap: 1.5rem;
 
 }
 
+.timecards__current {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
 
-.timecards__last-week {
-    font-size: 10px;
-    color: var(--clr-neutral-300);
+.timecards__previous {
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--clr-neutral-100);
+}
+
+@media screen and (min-width:600px) {
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .container-timecards {
+
+        flex: 1 1 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
