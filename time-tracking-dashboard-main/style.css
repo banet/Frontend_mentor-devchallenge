@@ -66,7 +66,7 @@ body {
 
 }
 
-.card-lg {
+.card--lg {
     border-radius: 1rem;
     padding: 1rem;
 }
@@ -102,9 +102,6 @@ body {
     border-bottom-left-radius: 12rem;
     border-bottom-right-radius: 12rem;
 }
-
-
-
 
 .avatar {
     width: clamp(4rem, 7vw, 7.5rem);
@@ -170,28 +167,77 @@ h1>span {
 
 /*====timecard ==========*/
 
-.timecard-work {
-    --bg: var(--clr-red-200);
-}
-
 .timecard .card--sm {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+}
+
+.timecard .card--lg {
+    --bg: var(--clr-neutral-600);
+    cursor: pointer;
+}
+
+.timecard--bottom {
+    display: grid;
+    gap: clamp(.5rem, 2vw, 2rem);
     position: relative;
 }
 
 
-
-.timecard--bottom {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
 .timecard--title,
 .timecard--amt {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+}
+
+.timecard--top {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.timecard--title .btn {
+    flex: 0 1 0%
+}
+
+.current {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.previous {
+    font-size: .8rem;
+    font-weight: 300;
+    color: var(--clr-neutral-100);
+}
+
+.icon {
+    position: absolute;
+    top: -.8rem;
+    right: .8rem;
+}
+
+.timecard-work {
+    --bg: var(--clr-red-200);
+}
+
+.timecard-play {
+    --bg: var(--clr-blue-200);
+}
+
+.timecard-study {
+    --bg: var(--clr-red-400);
+}
+
+.timecard-exercise {
+    --bg: var(--clr-green-200);
+}
+
+.timecard-social {
+    --bg: var(--clr-violet);
+}
+
+.timecard-selfCare {
+    --bg: var(--clr-orange);
 }
