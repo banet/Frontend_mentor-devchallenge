@@ -96,6 +96,8 @@ body {
     flex: 1 1 80%;
     padding: 1rem;
     gap: 1rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .card-avatar-top {
@@ -240,4 +242,44 @@ h1>span {
 
 .timecard-selfCare {
     --bg: var(--clr-orange);
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .container-timecards {
+        flex: 1 1 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card--avatar-top {
+        flex-wrap: wrap;
+        align-items: start;
+        align-content: start;
+        padding: 4rem 1rem;
+        gap: 2rem;
+    }
+
+    .card--avatar .card-avatar-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .avatar {
+        align-self: baseline;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container-timecards {
+        grid-template-columns: repeat(3, 1fr);
+        flex: 1 1 40%;
+    }
+
+
 }
