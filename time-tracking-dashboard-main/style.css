@@ -265,11 +265,6 @@ h1>span {
         gap: 2rem;
     }
 
-    .card--avatar .card-avatar-bottom {
-        display: flex;
-        flex-direction: column;
-    }
-
     .avatar {
         align-self: baseline;
     }
@@ -278,8 +273,10 @@ h1>span {
 @media screen and (min-width: 1024px) {
     .container-timecards {
         grid-template-columns: repeat(3, 1fr);
-        flex: 1 1 40%;
+        flex: 1 1 80%;
     }
+
+
 
 
 }
