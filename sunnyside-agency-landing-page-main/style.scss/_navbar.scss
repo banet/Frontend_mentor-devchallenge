@@ -1,0 +1,80 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #333;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 2rem 1.5rem;
+
+    .menu-layout {
+        display: none;
+    }
+
+    .hide {
+        opacity: 0.5;
+    }
+
+    .hamburger {
+        transition: all 0.4s ease;
+    }
+
+    .menu-mobile {
+        position: absolute;
+        top: 5rem;
+        left: 6%;
+        width: 88%;
+        border: 1px solid pink;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .triangel {
+        width: 0;
+        height: 0;
+        border-bottom: 2.5rem solid $white;
+        border-left: 2.5rem solid transparent;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: $white;
+
+        padding: 3.5rem;
+
+        ul {
+            list-style: none;
+
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .navbar {
+        padding: 2.9rem 5rem 1rem 2.7rem;
+
+        .nav-logo {
+            width: 11rem;
+        }
+
+        .menu-layout {
+            display: flex;
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+}
